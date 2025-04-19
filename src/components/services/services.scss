@@ -148,10 +148,18 @@
 .title{
   font-size: 40px;
   color: orange;
+
+  @include mobile {
+    font-size: 28px;
+  }
 }
 
 .timeline{
   color: orange;
+
+  // @include mobile {
+  //   font-size: 16px;
+  // }
 }
 
 .flex-container {
@@ -161,6 +169,12 @@
   justify-content: space-around;
   align-items: center;
   margin-top: 16px;
+  
+  @include mobile {
+    margin-top: 60px;
+    height: calc(100vh - 100px);
+    overflow: hidden;
+  }
 }
 
 .innerDiv {
@@ -185,9 +199,133 @@
 .main-block {
   width: 80%;
   margin: 0 5rem;
+  
+  @include mobile {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 .listClass {
   margin: 10px;
 }
 
+// Tab styles - only visible on mobile
+.tabs-container {
+  display: none;
+  
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+}
+
+.tab-button {
+  display: none;
+  
+  @include mobile {
+    display: block;
+    background: transparent;
+    border: 1px solid orange;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    width: 80%;
+    text-align: center;
+    
+    &:hover {
+      background-color: rgba(255, 165, 0, 0.1);
+    }
+    
+    &.active {
+      background-color: orange;
+      color: #0c0c1d;
+    }
+  }
+}
+
+// Compact tabs for mobile
+.compact-tabs {
+  display: none;
+  
+  @include mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+    border-bottom: 1px solid rgba(255, 165, 0, 0.3);
+    margin-top: 10px;
+    position: sticky;
+    top: 0;
+    background: linear-gradient(180deg, #0c0c1d, #111132);
+    z-index: 10;
+    padding-top: 5px;
+  }
+}
+
+.tab-item {
+  display: none;
+  
+  @include mobile {
+    display: inline-block;
+    padding: 8px 12px;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: orange;
+    }
+    
+    &.active {
+      color: orange;
+      
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -1px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: orange;
+      }
+    }
+  }
+}
+
+.tab-content {
+  width: 100%;
+  
+  @include mobile {
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+    padding-bottom: 30px;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+// Mobile view specific styles
+.mobile-view {
+  @include mobile {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.sub-title {
+  font-size: 20px;
+  margin-bottom: 4px;
+}

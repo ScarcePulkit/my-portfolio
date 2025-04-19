@@ -54,9 +54,7 @@ const Contact = () => {
         width="450px" 
         height="450px" 
         viewBox="0 0 32.666 32.666"
-        style={{ 
-          marginRight: '124px',
-        }}
+        className="svg-contact"
       >
         <path
           strokeWidth={0.2}
