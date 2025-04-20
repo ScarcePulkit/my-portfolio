@@ -32,6 +32,10 @@
         width: 32px;
         height: 32px;
       }
+
+      @include tablet {
+        margin-right: 24px;
+      }
     }
   }
 }

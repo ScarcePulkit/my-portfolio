@@ -33,7 +33,7 @@ html {
     }
   }
   @mixin tablet {
-    @media (max-width: 1024px) {
+    @media (max-width: 1030px) and (min-width: 769px){
       @content;
     }
   }

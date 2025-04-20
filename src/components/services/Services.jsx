@@ -185,7 +185,7 @@ const Services = () => {
   // Desktop view - original layout
   const DesktopView = () => (
     <>
-      <motion.div className="main-block" style={{marginLeft: "100px"}}>
+      <motion.div className="main-block">
         <EducationTab />
         <br/>
         <SkillsTab />
@@ -193,7 +193,6 @@ const Services = () => {
 
       <motion.div 
         className="main-block"
-        style={{marginTop: "0px"}}
       >
         <ExperienceTab />
       </motion.div>

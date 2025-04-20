@@ -33,6 +33,15 @@
         margin-right: 80px;
       }
 
+      @include tablet {
+        height: 500px;
+        width: 800px;
+        gap: 20px;
+        align-items: center;
+        text-align: center;
+        margin-right: 150px;
+      }
+
       h2 {
         font-size: 30px;
         color: rebeccapurple;
@@ -41,6 +50,10 @@
         @include mobile {
           font-size: 20px;
         }
+
+        @include tablet {
+          font-size: 32px;
+        }
       }
 
       h1 {
@@ -48,6 +61,10 @@
 
         @include mobile {
           font-size: 60px;
+        }
+
+        @include tablet {
+          font-size: 100px;
         }
       }
 
@@ -83,6 +100,13 @@
       width: 100%;
       top: unset;
       bottom: 0;
+    }
+
+    @include tablet {
+      height: 75%;
+      width: 100%;
+      margin-right: 124px;
+      margin-top: 250px;
     }
 
     img{

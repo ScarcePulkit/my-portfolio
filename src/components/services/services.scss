@@ -175,6 +175,12 @@
     height: calc(100vh - 100px);
     overflow: hidden;
   }
+  
+  @include tablet {
+    height: calc(100vh - 100px);
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .innerDiv {
@@ -182,6 +188,10 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+
+  @include tablet {
+    padding-top: 8px;
+  }
 }
 
 .courses {
@@ -203,6 +213,13 @@
   @include mobile {
     width: 90%;
     margin: 0 auto;
+  }
+
+  @include tablet {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 

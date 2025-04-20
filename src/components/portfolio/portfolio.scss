@@ -16,6 +16,10 @@
       display: none;
     }
 
+    @include tablet {
+      display: none;
+    }
+
     .progressBar {
       height: 10px;
       background-color: white;
@@ -43,6 +47,10 @@
         flex-direction: column;
       }
 
+      @include tablet {
+        flex-direction: column;
+      }
+
       .imageContainer {
         flex: 1;
         height: 50%;
@@ -58,6 +66,10 @@
           object-fit: cover;
 
           @include mobile {
+            object-fit: contain;
+          }
+
+          @include tablet {
             object-fit: contain;
           }
         }
@@ -76,6 +88,15 @@
           text-align: center;
         }
 
+        @include tablet {
+          transform: none !important;
+          padding: 10px;
+          align-items: center;
+          text-align: center;
+          width: 80%;
+          max-height: 1000px;
+        } 
+
         h2 {
           font-size: 72px;
           margin-top: 48px;
@@ -91,6 +112,10 @@
 
           @include mobile {
             font-size: 16px;
+          }
+
+          @include tablet {
+            font-size: 20px;
           }
         }
 
